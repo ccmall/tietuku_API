@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>贴图库上传API演示</title>
+	<link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.form.js"></script>
+	<script src="./js/embed.js"></script>
+</head>
+
+
+<body>
+	<div id="msg">
+		<div id="loading_up">
+			<center><img src="./img/ajax-loader_1.gif" width="88" height="88" /></center>
+		<center>正在上传，请稍后...</center>
+		</div>
+		<div id="success_up"><center>上传成功！</center></div>
+	</div>
+	
+	
+	<div id="up">
+		<center>
+		<p id="title">贴图库上传API演示</p>
+		<p>&nbsp;</p>
+		<form enctype="multipart/form-data" method="post" action="http://up.imgapi.com/" id="upform">
+		<input name="Token" id="token" value="02e2cd6ecdc6c197eb2e9fc4cc9442506e1ae474:SmoL_SmQd93K_LGzwGs8_uAhyEs=:eyJkZWFkbGluZSI6MTQ3MTM1Mzc2MiwiYWN0aW9uIjoiZ2V0IiwidWlkIjoiNDg5MCIsImFpZCI6IjEyMzgyOTUiLCJmcm9tIjoiZmlsZSJ9" type="hidden">
+		<input type="file" name="file" id="file">
+		<input type="hidden" name="from" value="file">
+		<input type="hidden" name="httptype" value="1">
+		<input type="submit" id='btn' value="开始上传" class="btn">
+		</form>
+		</center>
+	</div>
+	
+	
+	
+	<div id="show">
+		<center>
+		<form>
+			<table>
+				<tr>
+					<td align="right">原图外链：</td>
+					<td><input type="text" name="linkurl" id="linkurl" value=""></td>
+				</tr>
+				<tr>
+					<td align="right" valign="top">展示图外链：</td>
+					<td><input type="text" name="s_url" id="s_url" value=""></td>
+				</tr>
+				<tr>
+					<td align="right" valign="top">缩略图外链：</td>
+					<td><input type="text" name="t_url" id="t_url" value=""></td>
+				</tr>
+				<tr>
+					<td align="right">HTML代码：</td>
+					<td><input type="text" name="htmlurl" id="htmlurl" value=""></td>
+				</tr>
+				<tr>
+					<td align="right">UBB代码：</td>
+					<td><input type="text" name="ubburl" id="ubburl" value=""></td>
+				</tr>
+				<tr>
+					<td align="right">MarkDown：</td>
+					<td><input type="text" name="markdown" id="markdown" value=""></td>
+				</tr>
+			</table>
+		</form>
+		</center>
+	</div>
+	
+	
+	
+	<!--图片上传成功后显示-->
+	<div id="img-box"><center><a href="" id="img-url" target="_blank" title="点此查看原图" rel="nofollow"><img src="" id="show_img" width="" height="" /></a></center></div>
+	
+</body>
+</html>
